@@ -19,19 +19,32 @@ body .container {
   background-color: var(--Very-dark-blue2);
   border-radius: 0.5em;
 }
+body .container hr {
+  border: 1px solid var(--Very-dark-blue3);
+}
 body .container .image {
   border-radius: 0.5em;
-}
-body .container .image:hover {
-  background-color: var(--Cyan);
-  z-index: 4;
-}
-body .container .image img {
-  border-radius: 0.5em;
+  background-image: url("image-equilibrium.jpg");
+  background-size: cover;
   width: 19.5em;
+  height: 19.5em;
 }
-body .container .image img:hover {
-  cursor: pointer;
+body .container .image:hover:after {
+  content: "\a";
+  width: inherit;
+  height: inherit;
+  background: rgba(139, 172, 218, 0.5);
+  position: absolute;
+  top: 49px;
+  left: 516px;
+  border-radius: 0.5em;
+}
+body .container .image .svg {
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 body .container h2:hover {
   color: var(--Cyan);

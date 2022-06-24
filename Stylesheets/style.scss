@@ -1,89 +1,100 @@
 :root {
-    --Soft-blue: hsl(215, 51%, 70%);
-    --Cyan: hsl(178, 100%, 50%);
-    --Very-dark-blue1: hsl(217, 54%, 11%);
-    --Very-dark-blue2: hsl(216, 50%, 16%);
-    --Very-dark-blue3: hsl(215, 32%, 27%);
-    --White: hsl(0, 0%, 100%);
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue1: hsl(217, 54%, 11%);
+  --Very-dark-blue2: hsl(216, 50%, 16%);
+  --Very-dark-blue3: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
 }
 
 body {
-    display: grid;
-    place-items: center;
-    background-color: var(--Very-dark-blue1);
-    color: var(--White);
-    height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--Very-dark-blue1);
+  color: var(--White);
+  height: 100vh;
 
-    .container {
-        padding: 1.5em;
-        background-color: var(--Very-dark-blue2);
-        border-radius: 0.5em;
+  .container {
+    padding: 1.5em;
+    background-color: var(--Very-dark-blue2);
+    border-radius: 0.5em;
 
-        .image {
-            border-radius: 0.5em;
-            
-                &:hover {
-                    background-color: var(--Cyan);
-                    z-index: 4;
-                }
-
-                img {
-                    border-radius: 0.5em;
-                    width: 19.5em;
-        
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
-        }
-
-        
-
-        h2 {
-            &:hover {
-                color: var(--Cyan);
-                cursor: pointer;
-            }
-        }
-
-        p {
-           color: var(--Soft-blue); 
-           font-size: 18px;
-           width: 15em;
-        }
-        
-        .coin-details {
-            display: flex;
-            justify-content: space-between;
-
-            .amount {
-                color: var(--Cyan);
-            }
-
-            .days {
-                color: var(--Soft-blue)
-            }
-        }
-
-        .creator {
-            display: flex;
-            align-items: center;
-            gap: 0.5em;
-
-            img {
-                width: 2em;
-            }
-
-            p {
-                span {
-                    color: var(--White);
-
-                    &:hover {
-                        color: var(--Cyan);
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
+    hr {
+      border: 1px solid var(--Very-dark-blue3);
     }
+
+    .image {
+      border-radius: 0.5em;
+      background-image: url("image-equilibrium.jpg");
+      background-size: cover;
+      width: 19.5em;
+      height: 19.5em;
+
+      &:hover:after {
+        content: "\A";
+        width: inherit;
+        height: inherit;
+        background: rgba(139, 172, 218, 0.5);
+        position: absolute;
+        top: 49px;
+        left: 516px;
+        border-radius: 0.5em;
+      }
+
+      .svg {
+        display: block;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    h2 {
+      &:hover {
+        color: var(--Cyan);
+        cursor: pointer;
+      }
+    }
+
+    p {
+      color: var(--Soft-blue);
+      font-size: 18px;
+      width: 15em;
+    }
+
+    .coin-details {
+      display: flex;
+      justify-content: space-between;
+
+      .amount {
+        color: var(--Cyan);
+      }
+
+      .days {
+        color: var(--Soft-blue);
+      }
+    }
+
+    .creator {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+
+      img {
+        width: 2em;
+      }
+
+      p {
+        span {
+          color: var(--White);
+
+          &:hover {
+            color: var(--Cyan);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
 }
